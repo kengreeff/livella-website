@@ -64,7 +64,7 @@ const Hero = () => {
           className="
             absolute
             bg-cover
-            w-2/4
+            w-3/5
             bg-white
             min-h-screen
             right-0

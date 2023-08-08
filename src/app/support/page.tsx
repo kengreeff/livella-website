@@ -18,23 +18,23 @@ const GET_LATEST_FAQ_QUERY = gql`
   }
 `
 
-type FAQPageProps = {
-  children: React.ReactNode,
-}
-
-const FAQPage = (props: FAQPageProps) => {
+const SupportPage = () => {
   const { data } = useSuspenseQuery(GET_LATEST_FAQ_QUERY);
 
   return (
-    <div>
-      {data?.faqCollection?.items?.map((item) => (
-        <div key={item.title}>
-          <h2>{item.title}</h2>
-          <p>{item.body}</p>
-        </div>
-      ))}
-    </div>
+    <main>
+      <MainNavigation />
+
+      <div>
+        {data?.faqCollection?.items?.map((item) => (
+          <div key={item.title}>
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </main>
   )
 }
 
-export default FAQPage
+export default SupportPage
