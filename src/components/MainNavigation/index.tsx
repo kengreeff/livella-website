@@ -14,7 +14,7 @@ const MainNavigation = () => {
 
         <ul className={`inline-flex ml-auto uppercase ${karla.className} text-md tracking-wide`}>
           <li>
-            <NextLink href="/home">
+            <NextLink href="/">
               Home
             </NextLink>
           </li>
