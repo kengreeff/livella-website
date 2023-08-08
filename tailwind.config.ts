@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'black-60': 'linear-gradient(180deg, #1f1914 60%, #fff 0)',
+      },
       colors: {
         'livella-red': '#CB363A',
       },

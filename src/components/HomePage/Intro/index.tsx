@@ -30,7 +30,7 @@ const Intro = () => {
           </div>
 
           <div className="bg-white w-3/5 -mt-20 ml-16 p-16 pr-48">
-            <HeadingTag>Not just for cold winters</HeadingTag>
+            <HeadingTag colorScheme="black">Not just for cold winters</HeadingTag>
 
             <HeadingTwo className="mt-8">
               Say Hello to<br />

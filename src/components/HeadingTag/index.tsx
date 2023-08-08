@@ -1,13 +1,14 @@
 type HeadingTagProps = {
   children: React.ReactNode,
+  colorScheme?: 'white' | 'black',
 }
 
 const HeadingTag = (props: HeadingTagProps) => {
-  const { children } = props
+  const { children, colorScheme = 'white' } = props
 
   return (
-    <div className="flex items-center">
-      <hr className="border-black w-5 mr-4"/>
+    <div className={`flex items-center text-${colorScheme}`}>
+      <hr className={`border-${colorScheme} w-5 mr-4`} />
       {children}
     </div>
   )

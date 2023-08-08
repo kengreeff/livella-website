@@ -8,11 +8,14 @@ const karla = Karla({ subsets: ['latin'], weight: '500' })
 
 const MainNavigation = () => {
   return (
-    <div className="w-full flex text-gray-100 items-center bg-black h-24 max-xl:p-4">
+    <div className="w-full flex text-gray-100 items-center bg-black h-24 p-8 xl:p-0">
       <ContentWrapper>
         <Logo />
 
-        <ul className={`inline-flex ml-auto uppercase ${karla.className} text-md tracking-wide`}>
+        <ul
+          className="hidden lg:inline-flex ml-auto uppercase text-md tracking-wide"
+          style={{ ...karla.style }}
+        >
           <li>
             <NextLink href="/">
               Home
