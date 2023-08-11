@@ -4,6 +4,7 @@ import Intro from "@/components/HomePage/Intro";
 import KeyFeatures from "@/components/HomePage/KeyFeatures";
 import MainNavigation from "@/components/MainNavigation";
 import Products from "@/components/HomePage/Products";
+import Questions from "@/components/HomePage/Questions";
 import Reference from "@/components/HomePage/Reference";
 import Statistics from "@/components/HomePage/Statistics";
 
@@ -19,6 +20,8 @@ function Home() {
       <Statistics />
       <Reference />
       <Products />
+
+      <Questions />
     </main>
   )
 }

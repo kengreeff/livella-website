@@ -1,8 +1,6 @@
-import { FaTruck } from "react-icons/fa"
 import { BsBox, BsClock, BsTruck } from "react-icons/bs"
 
 import ContentWrapper from "@/components/ContentWrapper"
-import HeadingTag from "@/components/HeadingTag"
 import HeadingTwo from "@/components/HeadingTwo"
 
 import Product from './Product'
