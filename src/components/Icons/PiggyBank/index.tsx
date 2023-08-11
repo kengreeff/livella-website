@@ -8,7 +8,7 @@ const PiggyBankIcon = (props: PiggyBankIconProps) => {
 
   return (
     <svg width={width} height={height} viewBox="0 0 111 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g id="piggy-bank 1" clip-path="url(#clip0_7_1719)">
+      <g id="piggy-bank 1" clipPath="url(#clip0_7_1719)">
       <g id="Group">
       <g id="Group_2">
       <path id="Vector" d="M91.272 58.1394C90.3879 58.1394 89.6712 58.8561 89.6712 59.7402C89.6712 60.861 88.7594 61.7728 87.6385 61.7728C86.5179 61.7728 85.6059 60.861 85.6059 59.7402C85.6059 58.8559 84.8892 58.1394 84.0051 58.1394C83.121 58.1394 82.4043 58.8561 82.4043 59.7402C82.4043 62.6264 84.7525 64.9744 87.6385 64.9744C90.5245 64.9744 92.8728 62.6262 92.8728 59.7402C92.8728 58.8557 92.1561 58.1394 91.272 58.1394Z" fill="black"/>
