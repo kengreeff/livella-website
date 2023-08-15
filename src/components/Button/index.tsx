@@ -29,6 +29,28 @@ const Button = (props: ButtonProps) => {
     )
   }
 
+  if (buttonStyle === 'secondaryBlack') {
+    return (
+      <a
+        className="
+          border
+          border-gray-400
+          cursor-pointer
+          px-8
+          py-4
+          rounded-3xl
+          text-black
+          text-sm
+          tracking-widest
+          uppercase
+        "
+        style={style}
+      >
+        {children}
+      </a>
+    )
+  }
+
   return (
     <a
       className="

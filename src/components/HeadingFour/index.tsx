@@ -1,28 +1,27 @@
-import { twMerge } from 'tailwind-merge'
 import { Nanum_Myeongjo } from 'next/font/google'
 
 const nanumMyeongjo = Nanum_Myeongjo({
   display: 'swap',
   subsets: ['latin'],
-  weight: '400'
+  weight: '400',
 })
 
-type HeadingTwoProps = {
+type HeadingFourProps = {
   children: React.ReactNode,
   className?: string,
 }
 
-const HeadingTwo = (props: HeadingTwoProps) => {
+const HeadingFour = (props: HeadingFourProps) => {
   const { children, className = '' } = props
 
   return (
-    <h2
-      className={twMerge(`max-w-4xl text-5xl leading-tight tracking-normal mt-20`, className)}
+    <h4
+      className={`max-w-4xl text-xl leading-tight tracking-normal mt-8 ${className}`}
       style={{ ...nanumMyeongjo.style }}
     >
       {children}
-    </h2>
+    </h4>
   )
 }
 
-export default HeadingTwo
+export default HeadingFour
