@@ -17,7 +17,7 @@ const HeadingTwo = (props: HeadingTwoProps) => {
 
   return (
     <h2
-      className={twMerge(`max-w-4xl text-5xl leading-tight tracking-normal mt-20`, className)}
+      className={twMerge(`max-w-4xl text-4xl lg:text-5xl leading-tight tracking-normal mt-20`, className)}
       style={{ ...nanumMyeongjo.style }}
     >
       {children}

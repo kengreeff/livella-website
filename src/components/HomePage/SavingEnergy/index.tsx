@@ -10,7 +10,7 @@ import ListItem from './ListItem'
 
 const SavingEnergy = () => {
   return (
-    <section className="w-full p-16">
+    <section className="w-full p-8 lg:p-16">
       <ContentWrapper>
         <div className="flex flex-col w-full">
           <div className="flex flex-col lg:flex-row w-full">

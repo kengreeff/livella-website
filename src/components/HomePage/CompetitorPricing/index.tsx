@@ -8,7 +8,7 @@ import GraphImage from './assets/graph.svg'
 
 const CompetitorPricing = () => {
   return (
-    <section className="w-full lg:py-32 p-16 bg-black">
+    <section className="w-full p-8 lg:py-32 lg:px-16 bg-black">
       <ContentWrapper>
         <div className="flex flex-col lg:flex-row w-full">
           <div className="flex flex-col text-gray-100">

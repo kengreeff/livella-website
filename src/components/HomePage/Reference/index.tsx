@@ -8,7 +8,7 @@ import GlassStairsImage from './assets/glass-stairs.jpeg'
 
 const Reference = () => {
   return (
-    <section className="w-full p-16">
+    <section className="w-full p-8 lg:p-16">
       <ContentWrapper>
         <div className="flex flex-col w-full relative">
           <div
@@ -18,11 +18,12 @@ const Reference = () => {
               bg-white
               left-0
               z-0
+              w-full
+              lg:w-3/5
             "
             style={{
               aspectRatio: 860 / 585,
               backgroundImage: `url(${GlassStairsImage.src})`,
-              width: '60%',
             }}
           />
 
@@ -31,17 +32,20 @@ const Reference = () => {
               justify-center
               flex
               flex-col
-              mt-16
-              p-16
+              mt-64
+              lg:mt-16
+              p-8
+              lg:p-16
               right-0
               self-end
               z-10
+              w-full
+              lg:w-3/5
             "
             style={{
               aspectRatio: 860 / 585,
               backgroundColor: '#F9F7F3',
               top: 100,
-              width: '60%',
             }}
           >
             <HeadingTwo className="mt-0">

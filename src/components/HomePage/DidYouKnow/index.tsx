@@ -4,9 +4,9 @@ import HeadingTwo from "@/components/HeadingTwo"
 
 const DidYouKnow = () => {
   return (
-    <section className="w-full p-16">
+    <section className="w-full p-8 lg:p-16">
       <ContentWrapper>
-        <div className="flex flex-col bg-livella-tan p-16">
+        <div className="flex flex-col bg-livella-tan p-8 lg:p-16">
           <HeadingTwo className="mt-0">
             Did you know?
           </HeadingTwo>
@@ -26,10 +26,10 @@ const DidYouKnow = () => {
             Or read through our comprehensive FAQ/Troubleshooting Guide
           </p>
 
-          <div className="mt-16">
+          <div className="flex flex-col lg:flex-row justify-start mt-8">
             <Button>Email Us</Button>
 
-            <Button buttonStyle="secondaryBlack" style={{ marginLeft: 8 }}>
+            <Button buttonStyle="secondaryBlack" className="mt-2 lg:mt-0 lg:ml-2">
               1300 350 607
             </Button>
           </div>

@@ -1,14 +1,17 @@
+import { twMerge } from "tailwind-merge"
+
 type KeyFeatureProps = {
   children: React.ReactNode,
+  className?: string,
   icon: React.ReactNode,
   title: string,
 }
 
 const KeyFeature = (props: KeyFeatureProps) => {
-  const { children, icon, title } = props
+  const { children, className, icon, title } = props
 
   return (
-    <div className="flex flex-col items-center">
+    <div className={twMerge("flex flex-col items-center", className)}>
       <span>
         {icon}
       </span>

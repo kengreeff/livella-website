@@ -10,8 +10,8 @@ const Footer = () => {
     <section className="w-full bg-livella-light-tan">
       <div className="flex flex-col w-full">
         <ContentWrapper>
-          <div className="flex flex-col lg:flex-row w-full py-16">
-            <div className="flex flex-col w-1/4 text-sm text-gray-600">
+          <div className="flex flex-col lg:flex-row w-full px-8 lg:px-0 py-8 lg:py-16">
+            <div className="flex flex-col lg:w-1/4 text-sm text-gray-600">
               <HeadingFour>About Us</HeadingFour>
 
               <p className="mt-4">
@@ -42,7 +42,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="flex flex-col text-sm text-gray-600 ml-16">
+            <div className="flex flex-col text-sm text-gray-600 lg:ml-16">
               <HeadingFour>Customer Care</HeadingFour>
 
               <p className="mt-4">Contact Us</p>
@@ -52,7 +52,7 @@ const Footer = () => {
               <p className="mt-2">Frequently Asked Questions</p>
             </div>
 
-            <div className="flex flex-col text-sm text-gray-600  ml-16">
+            <div className="flex flex-col text-sm text-gray-600 lg:ml-16">
               <HeadingFour>Important Resources</HeadingFour>
 
               <p className="mt-4">Our Installers</p>
@@ -62,7 +62,7 @@ const Footer = () => {
               <p className="mt-2">Trade Resources</p>
             </div>
 
-            <div className="flex flex-col items-start text-sm text-gray-600 max-w-xs ml-auto">
+            <div className="flex flex-col items-start text-sm text-gray-600 max-w-xs lg:ml-auto">
               <p className="mt-8">Sitemap</p>
               <p className="mt-2">Terms of Use</p>
               <p className="mt-2">Privacy Policy</p>
@@ -87,19 +87,19 @@ const Footer = () => {
           </div>
         </ContentWrapper>
 
-        <div className="flex w-full bg-livella-tan p-4 text-sm text-gray-500">
+        <div className="flex flex-col lg:flex-row w-full bg-livella-tan p-4 text-sm text-gray-500">
           <a href="https://www.kengreeff.com">Website by Initium Studio</a>
 
-          <div className="flex mx-auto">
-            <span className="flex items-center">
+          <div className="flex flex-col lg:flex-row lg:mx-auto my-4 lg:my-0">
+            <span className="flex lg:items-center">
               <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (AU)
             </span>
             
-            <span className="flex items-center mx-8">
+            <span className="flex lg:items-center lg:mx-8">
               <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (NZ)
             </span>
 
-            <span className="flex items-center">
+            <span className="flex lg:items-center">
               <FaCopyright style={{ marginRight: 8 }} /> Copyright Livella 2023
             </span>
           </div>

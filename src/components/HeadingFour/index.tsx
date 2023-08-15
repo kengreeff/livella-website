@@ -16,7 +16,7 @@ const HeadingFour = (props: HeadingFourProps) => {
 
   return (
     <h4
-      className={`max-w-4xl text-xl leading-tight tracking-normal mt-8 ${className}`}
+      className={`max-w-4xl text-lg lg:text-xl leading-tight tracking-normal mt-8 ${className}`}
       style={{ ...nanumMyeongjo.style }}
     >
       {children}

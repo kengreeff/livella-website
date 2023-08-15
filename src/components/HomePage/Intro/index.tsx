@@ -20,7 +20,7 @@ const Intro = () => {
               items-center
               justify-center
               w-full
-              mt-16
+              lg:mt-16
               bg-cover
               bg-center
             "
@@ -29,7 +29,7 @@ const Intro = () => {
             <ImYoutube className="text-white text-8xl" />
           </div>
 
-          <div className="bg-white w-3/5 -mt-20 ml-16 p-16 pr-48">
+          <div className="bg-white lg:w-3/5 lg:-mt-20 lg:ml-16 p-8 lg:p-16 lg:pr-48">
             <HeadingTag colorScheme="black">Not just for cold winters</HeadingTag>
 
             <HeadingTwo className="mt-8">

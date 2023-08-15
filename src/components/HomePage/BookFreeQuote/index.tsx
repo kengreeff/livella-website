@@ -12,14 +12,15 @@ const BookFreeQuote = () => {
         bg-cover
         bg-left-bottom
         w-full
-        p-16
+        p-8
+        lg:p-16
       "
       style={{
         backgroundImage: `url(${DiningRoomImage.src})`,
       }}
     >
       <ContentWrapper>
-        <div className="flex flex-col bg-black w-full p-16">
+        <div className="flex flex-col bg-black w-full p-8 lg:p-16">
           <HeadingTag colorScheme="white">Ready to turn up the heat?</HeadingTag>
 
           <HeadingTwo className="text-white mt-8">

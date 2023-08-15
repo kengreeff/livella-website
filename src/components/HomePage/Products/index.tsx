@@ -7,10 +7,10 @@ import Product from './Product'
 
 const Products = () => {
   return (
-    <section className="w-full p-16">
+    <section className="w-full p-8 lg:p-16">
       <ContentWrapper>
         <div className="flex flex-col w-full">
-          <HeadingTwo>
+          <HeadingTwo className="mt-0 lg:mt-20">
             Our Products
           </HeadingTwo>
 
@@ -55,7 +55,7 @@ const Products = () => {
                 <BsTruck style={{ fontSize: 24 }} />
               </div>
 
-              <span className="text-sm mt-4">Free Shipping*</span>
+              <span className="text-sm text-center mt-4">Free Shipping*</span>
             </div>
 
             <div className="flex flex-col items-center mx-12">
@@ -66,7 +66,7 @@ const Products = () => {
                 <BsClock style={{ fontSize: 24 }} />
               </div>
 
-              <span className="text-sm mt-4">Next-day Dispatch</span>
+              <span className="text-sm text-center mt-4">Next-day Dispatch</span>
             </div>
 
             <div className="flex flex-col items-center">
@@ -77,7 +77,7 @@ const Products = () => {
                 <BsBox style={{ fontSize: 24 }} />
               </div>
 
-              <span className="text-sm mt-4">Qty Guarantee</span>
+              <span className="text-sm text-center mt-4">Qty Guarantee</span>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import Question from './Question'
 
 const FrequentlyAskedQuestions = () => {
   return (
-    <section className="w-full p-16 pt-0">
+    <section className="w-full p-8 lg:p-16 pt-0">
       <ContentWrapper>
         <div className="flex flex-col w-full">
           <HeadingTwo className="mt-0">
@@ -59,12 +59,12 @@ const FrequentlyAskedQuestions = () => {
               Need anything else?
             </span>
 
-            <div className="flex justify-center border mt-4 p-8">
+            <div className="flex flex-col lg:flex-row justify-center border mt-4 p-8">
               <span className="flex items-center">
                 <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (AU)
               </span>
               
-              <span className="flex items-center mx-8">
+              <span className="flex items-center lg:mx-8">
                 <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (NZ)
               </span>
 
