@@ -4,11 +4,13 @@ type ButtonProps = {
   buttonStyle?: 'primary' | 'secondaryWhite' | 'secondaryBlack',
   children: React.ReactNode,
   className?: string,
+  href?: string,
+  target?: string,
   style?: object,
 }
 
 const Button = (props: ButtonProps) => {
-  const { buttonStyle, children, className, style } = props
+  const { buttonStyle, children, className, href, style, target = '_blank' } = props
 
   if (buttonStyle === 'secondaryWhite') {
     return (
@@ -27,7 +29,10 @@ const Button = (props: ButtonProps) => {
             uppercase
           `, className)
         }
+        href={href}
+        rel="noopener noreferrer"
         style={style}
+        target={target}
       >
         {children}
       </a>
@@ -51,7 +56,10 @@ const Button = (props: ButtonProps) => {
             uppercase
           `, className)
         }
+        href={href}
+        rel="noopener noreferrer"
         style={style}
+        target={target}
       >
         {children}
       </a>

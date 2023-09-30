@@ -70,7 +70,11 @@ const Technical = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between pb-4 w-full">
               <span>Thermostat Controller Instructions</span>
 
-              <Button buttonStyle="secondaryBlack" className="mt-2 lg:mt-0 px-4 py-2">
+              <Button
+                buttonStyle="secondaryBlack"
+                className="mt-2 lg:mt-0 px-4 py-2"
+                href="/files/sample.pdf"
+              >
                 Download Instructions
               </Button>
             </div>
