@@ -29,19 +29,19 @@ const MainNavigation = () => {
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/home">
+            <NextLink className="ml-6" href="/products">
               Products
             </NextLink>
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/home">
+            <NextLink className="ml-6" href="/installers">
               Installers
             </NextLink>
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/faq">
+            <NextLink className="ml-6" href="/support">
               Help & Support
             </NextLink>
           </li>
