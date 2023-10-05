@@ -1,4 +1,3 @@
-import NextLink from 'next/link'
 import { Karla } from 'next/font/google'
 
 import ContentWrapper from "@/components/ContentWrapper"
@@ -17,33 +16,33 @@ const MainNavigation = () => {
           style={{ ...karla.style }}
         >
           <li>
-            <NextLink href="/">
+            <a href="/">
               Home
-            </NextLink>
+            </a>
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/about">
+            <a className="ml-6" href="/about">
               About Us
-            </NextLink>
+            </a>
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/products">
+            <a className="ml-6" href="/products">
               Products
-            </NextLink>
+            </a>
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/installers">
+            <a className="ml-6" href="/installers">
               Installers
-            </NextLink>
+            </a>
           </li>
 
           <li>
-            <NextLink className="ml-6" href="/support">
+            <a className="ml-6" href="/support">
               Help & Support
-            </NextLink>
+            </a>
           </li>
         </ul>
       </ContentWrapper>

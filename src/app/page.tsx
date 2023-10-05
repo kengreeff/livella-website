@@ -43,9 +43,8 @@ const GET_FAQS_QUERY: TypedDocumentNode<FAQData> = gql`
   }
 `
 
-function Home() {
+function HomePage() {
   const { data: faqData } = useSuspenseQuery(GET_FAQS_QUERY)
-  console.log({ faqData })
 
   return (
     <main>
@@ -71,4 +70,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage
