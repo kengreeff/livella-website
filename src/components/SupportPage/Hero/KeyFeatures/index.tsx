@@ -55,7 +55,7 @@ const KeyFeatures = () => {
 
           <KeyFeature
             button={
-              <Button buttonStyle="secondaryWhite">
+              <Button buttonStyle="secondaryWhite" href="/contact" target="_self">
                 Email Us Today
               </Button>
             }
