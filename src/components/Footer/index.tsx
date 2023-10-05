@@ -45,17 +45,17 @@ const Footer = () => {
             <div className="flex flex-col text-sm text-gray-600 lg:ml-16">
               <HeadingFour>Customer Care</HeadingFour>
 
-              <p className="mt-4">Contact Us</p>
+              <a className="mt-4" href="/contact">Contact Us</a>
               <p className="mt-2">Warranty</p>
               <p className="mt-2">Care & Maintenance</p>
               <p className="mt-2">How to Use the Thermostat</p>
-              <p className="mt-2">Frequently Asked Questions</p>
+              <a className="mt-2" href="/support">Frequently Asked Questions</a>
             </div>
 
             <div className="flex flex-col text-sm text-gray-600 lg:ml-16">
               <HeadingFour>Important Resources</HeadingFour>
 
-              <p className="mt-4">Our Installers</p>
+              <a className="mt-4" href="/installers">Our Installers</a>
               <p className="mt-2">Australian Owned and Installed</p>
               <p className="mt-2">Documentation</p>
               <p className="mt-2">How to Use the Thermostat</p>
@@ -66,7 +66,7 @@ const Footer = () => {
               <p className="mt-8">Sitemap</p>
               <p className="mt-2">Terms of Use</p>
               <p className="mt-2">Privacy Policy</p>
-              <p className="mt-2">Contact Us</p>
+              <a className="mt-2" href="/contact">Contact Us</a>
 
               <div className="flex text-lg mt-8">
                 <FaFacebook style={{ marginRight: 12 }} />
@@ -80,7 +80,7 @@ const Footer = () => {
                 information about the product alongside an estimate for your project.
               </p>
 
-              <Button style={{ marginTop: 16 }}>
+              <Button href="/contact" style={{ marginTop: 16 }} target="_self">
                 Email Us
               </Button>
             </div>

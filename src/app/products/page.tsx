@@ -7,7 +7,7 @@ import Technical from "@/components/ProductsPage/Technical";
 import Touchscreen from "@/components/ProductsPage/Touchscreen";
 import MainNavigation from "@/components/MainNavigation";
 
-function Products() {
+function ProductsPage() {
   return (
     <main>
       <MainNavigation />
@@ -25,4 +25,4 @@ function Products() {
   )
 }
 
-export default Products
+export default ProductsPage

@@ -1,13 +1,13 @@
 import Footer from "@/components/Footer";
 import MainNavigation from "@/components/MainNavigation";
 
-function AboutPage() {
+function ContactPage() {
   return (
     <main>
       <MainNavigation />
 
       <div className="h-screen">
-        About Us
+        Contact Us
       </div>
 
       <Footer />
@@ -15,4 +15,4 @@ function AboutPage() {
   )
 }
 
-export default AboutPage
+export default ContactPage

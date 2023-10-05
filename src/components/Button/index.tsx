@@ -5,12 +5,13 @@ type ButtonProps = {
   children: React.ReactNode,
   className?: string,
   href?: string,
-  target?: string,
+  onClick?: VoidFunction,
   style?: object,
+  target?: string,
 }
 
 const Button = (props: ButtonProps) => {
-  const { buttonStyle, children, className, href, style, target = '_blank' } = props
+  const { buttonStyle, children, className, href, onClick, style, target = '_blank' } = props
 
   if (buttonStyle === 'secondaryWhite') {
     return (
@@ -20,6 +21,7 @@ const Button = (props: ButtonProps) => {
             border
             border-white
             cursor-pointer
+            inline-flex
             px-8
             py-4
             rounded-3xl
@@ -30,6 +32,7 @@ const Button = (props: ButtonProps) => {
           `, className)
         }
         href={href}
+        onClick={onClick}
         rel="noopener noreferrer"
         style={style}
         target={target}
@@ -57,6 +60,7 @@ const Button = (props: ButtonProps) => {
           `, className)
         }
         href={href}
+        onClick={onClick}
         rel="noopener noreferrer"
         style={style}
         target={target}
@@ -81,7 +85,11 @@ const Button = (props: ButtonProps) => {
           uppercase
         `, className)
       }
+      href={href}
+      onClick={onClick}
+      rel="noopener noreferrer"
       style={style}
+      target={target}
     >
       {children}
     </a>

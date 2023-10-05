@@ -1,13 +1,13 @@
 import Footer from "@/components/Footer";
 import MainNavigation from "@/components/MainNavigation";
 
-function AboutPage() {
+function InstallersPage() {
   return (
     <main>
       <MainNavigation />
 
       <div className="h-screen">
-        About Us
+        Our Installers
       </div>
 
       <Footer />
@@ -15,4 +15,4 @@ function AboutPage() {
   )
 }
 
-export default AboutPage
+export default InstallersPage

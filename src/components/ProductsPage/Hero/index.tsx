@@ -3,8 +3,8 @@ import { FaCheck } from 'react-icons/fa'
 
 const nanumMyeongjo = Nanum_Myeongjo({ subsets: ['latin'], weight: '400' })
 
-import Button from '@/components/Button'
 import ContentWrapper from '@/components/ContentWrapper'
+import HeadingOne from '@/components/HeadingOne'
 
 import HeroImage from './assets/hero.jpeg'
 
@@ -30,14 +30,11 @@ const Hero = () => {
         />
 
         <div className="relative z-10 p-8 lg:w-3/5">
-          <h1
-            className={`max-w-4xl text-4xl lg:text-6xl leading-tight tracking-wide mt-8 lg:mt-20`}
-            style={{ ...nanumMyeongjo.style }}
-          >
+          <HeadingOne>
             Smart<br />
             Programmable<br />
             Thermostats
-          </h1>
+          </HeadingOne>
 
           <p
             className="mt-8 lg:mt-12 lg:text-xl leading-relaxed max-w-2xl"

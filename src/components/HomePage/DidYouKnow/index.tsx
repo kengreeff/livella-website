@@ -19,7 +19,8 @@ const DidYouKnow = () => {
           </p>
 
           <p className="mt-4">
-            You can call us any time on 1300 350 607 (AU) or 0800 432 892 (NZ) or if you’d prefer to email us we’re available at info@livella.com.
+            You can call us any time on 1300 350 607 (AU) or 0800 432 892 (NZ) or 
+            if you&apos;d prefer to email us below.
           </p>
 
           <p className="mt-4 font-bold">
@@ -27,7 +28,7 @@ const DidYouKnow = () => {
           </p>
 
           <div className="flex flex-col lg:flex-row justify-start mt-8">
-            <Button>Email Us</Button>
+            <Button href="/contact" target="_self">Email Us</Button>
 
             <Button buttonStyle="secondaryBlack" className="mt-2 lg:mt-0 lg:ml-2">
               1300 350 607

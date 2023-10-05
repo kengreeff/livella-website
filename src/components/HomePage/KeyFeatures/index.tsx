@@ -3,7 +3,7 @@ import HeatIcon from "@/components/Icons/Heat"
 import PetsIcon from "@/components/Icons/Pets"
 import PiggyBankIcon from "@/components/Icons/PiggyBank"
 
-import KeyFeature from "./KeyFeature"
+import KeyFeature from "@/components/KeyFeature"
 
 const KeyFeatures = () => {
   return (
