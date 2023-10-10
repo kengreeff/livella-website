@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge"
+
 import { Nanum_Myeongjo } from 'next/font/google'
 
 const nanumMyeongjo = Nanum_Myeongjo({
@@ -16,7 +18,14 @@ const HeadingThree = (props: HeadingThreeProps) => {
 
   return (
     <h3
-      className={`max-w-4xl text-2xl lg:text-3xl leading-tight tracking-normal mt-8 ${className}`}
+      className={twMerge(`
+        max-w-4xl
+        text-2xl
+        lg:text-3xl
+        leading-tight
+        tracking-normal
+        mt-8
+      `, className)}
       style={{ ...nanumMyeongjo.style }}
     >
       {children}

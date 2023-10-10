@@ -1,4 +1,4 @@
-import BookFreeQuote from "@/components/HomePage/BookFreeQuote";
+import BookFreeQuote from "@/components/BookFreeQuote";
 import FeaturedInstallations from "@/components/FeaturedInstallations";
 import Footer from "@/components/Footer";
 import Hero from "@/components/ProductsPage/Hero";

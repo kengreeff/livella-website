@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import { gql, TypedDocumentNode } from "@apollo/client";
 
-import BookFreeQuote from "@/components/HomePage/BookFreeQuote";
+import BookFreeQuote from "@/components/BookFreeQuote";
 import CompetitorPricing from "@/components/HomePage/CompetitorPricing";
 import DidYouKnow from "@/components/HomePage/DidYouKnow";
 import FeaturedInstallations from "@/components/FeaturedInstallations";

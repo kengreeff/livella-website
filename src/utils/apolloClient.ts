@@ -17,3 +17,5 @@ export const { getClient } = registerApolloClient(() => {
     }),
   });
 })
+
+// https://www.apollographql.com/blog/apollo-client/next-js/how-to-use-apollo-client-with-next-js-13/
