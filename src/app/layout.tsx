@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 import { Karla } from 'next/font/google'
 import type { Metadata } from 'next'
 
@@ -26,6 +28,10 @@ function RootLayout(props: RootLayoutProps) {
           {children}
         </ApolloWrapper>
       </body>
+
+      {/* <Script
+        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&libraries=places`}
+      /> */}
     </html>
   )
 }
