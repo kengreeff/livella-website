@@ -22,6 +22,7 @@ const QuoteForm = (props: QuoteFormProps) => {
       address,
       email,
       firstName,
+      industry,
       lastName,
       phone,
     },
@@ -31,6 +32,19 @@ const QuoteForm = (props: QuoteFormProps) => {
     <section className="w-full p-8 lg:p-16">
       <ContentWrapper>
         <form className="w-full">
+          <FormRow>
+            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <FieldLabel htmlFor="industry">Industry</FieldLabel>
+              <Input
+                id="industry"
+                onChange={(e) => {
+                  setState({ industry: e.target.value })
+                }}
+                value={industry}
+              />
+            </div>
+          </FormRow>
+
           <FormRow>
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <FieldLabel htmlFor="firstName">First Name</FieldLabel>
