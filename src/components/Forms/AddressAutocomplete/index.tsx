@@ -28,6 +28,23 @@ const AddressAutocomplete = (props: AddressAutocompleteProps) => {
       debounce={300}
       minLengthAutocomplete={3}
       selectProps={{
+        classNames: {
+          control: () => `
+            appearance-none
+            block
+            w-full
+            text-gray-700
+            border
+            border-gray-200
+            rounded
+            py-1
+            px-2
+            mb-3
+            leading-tight
+            focus:outline-none
+            focus:bg-white
+          `,
+        },
         id: 'address',
         value,
         onChange,
