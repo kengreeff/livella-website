@@ -9,11 +9,10 @@ import groupContactsByTypeAndLocation from "@/utils/groupContactsByTypeAndLocati
 
 import BookFreeQuote from "@/components/BookFreeQuote";
 import Footer from "@/components/Footer"
-import GetInfoPack from "@/components/Installers/GetInfoPack"
-import Hero from "@/components/Installers/Hero";
-import Installers from "@/components/Installers/Installers";
+import Hero from "@/components/InstallersPage/Hero";
+import Installers from "@/components/InstallersPage/Installers";
 import MainNavigation from "@/components/MainNavigation"
-import Suppliers from "@/components/Installers/Suppliers";
+import Suppliers from "@/components/InstallersPage/Suppliers";
 
 export type ContactType = {
   shortcode: string,

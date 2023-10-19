@@ -25,7 +25,7 @@ const InstallationLocation = (props: InstallationLocationProps) => {
         {title}
       </HeadingThree>
 
-      <p>
+      <p className="mt-2">
         {children}
       </p>
     </div>

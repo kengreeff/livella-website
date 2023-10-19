@@ -32,7 +32,7 @@ const Hero = () => {
           }}
         />
 
-        <div className="relative z-10 p-16 lg:w-3/5">
+        <div className="relative z-10 p-8 py-20 lg:w-3/5">
           <HeadingOne>
             Livella, in store<br />
             or delivered to<br />

@@ -3,10 +3,10 @@ import NextImage from 'next/image'
 import ContentWrapper from "@/components/ContentWrapper"
 import HeadingTag from "@/components/HeadingTag"
 import HeadingTwo from "@/components/HeadingTwo"
+import ListItem from '@/components/ListItem'
 
 import LoungeImage from './assets/lounge.jpeg'
 
-import ListItem from './ListItem'
 
 const SavingEnergy = () => {
   return (
