@@ -7,6 +7,7 @@ type DefaultState = {
 	address: SingleValue<AddressOption> | null,
 	email: string,
 	firstName: string,
+	industry: string,
 	lastName: string,
 	phone: string,
 }
@@ -15,6 +16,7 @@ const defaultState = {
 	address: null,
 	email: '',
 	firstName: '',
+	industry: '',
 	lastName: '',
 	phone: '',
 }
@@ -32,6 +34,7 @@ function useQuoteForm(){
 					}
 				})
 			},
+			submitForm: () => console.log('submitForm'),
 		},
 		state,
 	}
