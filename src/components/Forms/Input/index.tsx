@@ -9,12 +9,22 @@ export type InputProps = {
   id: string,
   onChange: (event: ChangeEventHandler<HTMLInputElement>) => void,
   placeholder?: string,
+  required?: boolean,
   type?: "text" | "number",
   value: string,
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
-  const { className, errorMessage, id, onChange, placeholder, value, type = 'text' } = props
+  const {
+    className,
+    errorMessage,
+    id,
+    onChange,
+    placeholder,
+    required = false,
+    type = 'text',
+    value,
+  } = props
 
   return (
     <>
@@ -40,9 +50,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         }
         id={id}
         onChange={onChange}
-        ref={ref}
-        type={type}
         placeholder={placeholder}
+        ref={ref}
+        required={required}
+        type={type}
         value={value}
       />
 

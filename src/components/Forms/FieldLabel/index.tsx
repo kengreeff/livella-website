@@ -1,14 +1,26 @@
+import { twMerge } from "tailwind-merge"
+
 type FieldLabelProps = {
   children: React.ReactNode,
+  className?: string,
   htmlFor: string,
 }
 
 const FieldLabel = (props: FieldLabelProps) => {
-  const { children, htmlFor } = props
+  const { children, className, htmlFor } = props
 
   return (
     <label
-      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+      className={twMerge(`
+        block
+        uppercase
+        tracking-wide
+        text-gray-700
+        text-xs
+        font-bold
+        mb-2
+      `, className)
+      }
       htmlFor={htmlFor}
     >
       {children}

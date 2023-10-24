@@ -11,11 +11,12 @@ export type AddressOption = {
 type AddressAutocompleteProps = {
   id: string,
   onChange: (newValue: SingleValue<AddressOption>, actionMeta: ActionMeta<AddressOption>) => void,
+  required?: boolean,
   value?: SingleValue<AddressOption>,
 }
 
 const AddressAutocomplete = (props: AddressAutocompleteProps) => {
-  const { onChange, value } = props
+  const { onChange, required, value } = props
 
   return (
     <GooglePlacesAutocomplete
@@ -30,22 +31,21 @@ const AddressAutocomplete = (props: AddressAutocompleteProps) => {
       selectProps={{
         classNames: {
           control: () => `
-            appearance-none
-            block
             w-full
+            bg-gray-50
             text-gray-700
             border
             border-gray-200
-            rounded
             py-1
-            px-2
+            px-1
             mb-3
-            leading-tight
             focus:outline-none
             focus:bg-white
           `,
         },
         id: 'address',
+        isClearable: true,
+        required,
         value,
         onChange,
       }}

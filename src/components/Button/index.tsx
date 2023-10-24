@@ -1,21 +1,37 @@
 import { twMerge } from "tailwind-merge"
 
 type ButtonProps = {
+  as?: 'a' | 'button',
   buttonStyle?: 'primary' | 'secondaryWhite' | 'secondaryBlack',
   children: React.ReactNode,
   className?: string,
+  disabled?: boolean,
   href?: string,
   onClick?: VoidFunction,
   style?: object,
   target?: string,
+  type?: string,
 }
 
 const Button = (props: ButtonProps) => {
-  const { buttonStyle, children, className, href, onClick, style, target = '_blank' } = props
+  const {
+    as,
+    buttonStyle,
+    children,
+    className,
+    disabled = false,
+    href,
+    onClick,
+    style,
+    target = '_blank',
+    type,
+  } = props
+
+  const ButtonElement = as || 'a'
 
   if (buttonStyle === 'secondaryWhite') {
     return (
-      <a
+      <ButtonElement
         className={
           twMerge(`
             border
@@ -31,20 +47,22 @@ const Button = (props: ButtonProps) => {
             uppercase
           `, className)
         }
+        disabled={disabled}
         href={href}
         onClick={onClick}
         rel="noopener noreferrer"
         style={style}
         target={target}
+        type={type}
       >
         {children}
-      </a>
+      </ButtonElement>
     )
   }
 
   if (buttonStyle === 'secondaryBlack') {
     return (
-      <a
+      <ButtonElement
         className={
           twMerge(`
             border
@@ -59,19 +77,21 @@ const Button = (props: ButtonProps) => {
             uppercase
           `, className)
         }
+        disabled={disabled}
         href={href}
         onClick={onClick}
         rel="noopener noreferrer"
         style={style}
         target={target}
+        type={type}
       >
         {children}
-      </a>
+      </ButtonElement>
     )
   }
 
   return (
-    <a
+    <ButtonElement
       className={
         twMerge(`
           bg-livella-red
@@ -85,14 +105,16 @@ const Button = (props: ButtonProps) => {
           uppercase
         `, className)
       }
+      disabled={disabled}
       href={href}
       onClick={onClick}
       rel="noopener noreferrer"
       style={style}
       target={target}
+      type={type}
     >
       {children}
-    </a>
+    </ButtonElement>
   )
 }
 

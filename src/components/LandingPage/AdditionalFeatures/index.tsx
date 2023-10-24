@@ -38,7 +38,7 @@ const AdditionalFeatures = () => {
           </KeyFeature>
         </div>
 
-        <div className="border-b flex flex-col lg:flex-row mt-4 pb-16 w-full">
+        <div className="border-b flex flex-col lg:flex-row mt-4 px-8 pb-16 w-full">
           <ul className="w-full lg:w-1/2">
             <ListItem>Low/Non-Existant risk of accidental damage.</ListItem>
             <ListItem>Suitable for Cold Rooms, Veterinary Facilities, Disability Facilities and Snow Melt.</ListItem>

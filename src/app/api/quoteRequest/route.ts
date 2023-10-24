@@ -4,6 +4,7 @@ export async function POST(request: Request) {
   try {
     const jsonBody = await request.json()
     const {
+      attachmentIds = [],
       address,
       email,
       firstName,
@@ -19,6 +20,17 @@ export async function POST(request: Request) {
       fields: {
         address: {
           "en-US": address,
+        },
+        attachments: {
+          "en-US": attachmentIds.map((id: string) => {
+            return {
+              sys: {
+                type: "Link",
+                linkType: "Asset",
+                id,
+              }
+            }
+          }),
         },
         industry: {
           "en-US": industry,
@@ -41,8 +53,8 @@ export async function POST(request: Request) {
     // Send Email to the Team
     
 
-    return Response.json({ entry })
+    return Response.json({ success: true, entry  })
   } catch (error) {
-    return Response.json({ error })
+    return Response.json({ success: false, error })
   }
 }
