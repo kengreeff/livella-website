@@ -23,13 +23,19 @@ const MainNavigation = () => {
 
           <li>
             <a className="ml-6" href="/about">
-              About Us
+              About
             </a>
           </li>
 
           <li>
             <a className="ml-6" href="/products">
               Products
+            </a>
+          </li>
+
+          <li>
+            <a className="ml-6" href="/pricing">
+              Pricing
             </a>
           </li>
 
@@ -41,7 +47,7 @@ const MainNavigation = () => {
 
           <li>
             <a className="ml-6" href="/support">
-              Help & Support
+              Support
             </a>
           </li>
         </ul>

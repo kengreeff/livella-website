@@ -1,43 +1,25 @@
 "use client"
 
-import { scroller } from 'react-scroll'
+import useContactForm from "@/hooks/useContactForm"
 
-import useQuoteForm from "@/hooks/useQuoteForm"
-
-import AddressAutocomplete from "@/components/Forms/AddressAutocomplete"
 import Button from "@/components/Button"
 import ContentWrapper from "@/components/ContentWrapper"
 import FieldLabel from "@/components/Forms/FieldLabel"
-import FileUpload from "@/components/Forms/FileUpload"
 import FormRow from "@/components/Forms/FormRow"
 import HeadingThree from "@/components/HeadingThree"
 import HeadingTwo from "@/components/HeadingTwo"
 import Input from "@/components/Forms/Input"
 import Select from "@/components/Forms/Select"
 
-import AddRoom from './AddRoom'
-import Room from './Room'
-
-const QuoteForm = () => {
-  const quoteFormPayload = useQuoteForm({
-    callbacks: {
-      onSuccess: () => scroller.scrollTo('quoteRequest', {
-        duration: 800,
-        delay: 0,
-        smooth: 'easeInOutQuart'
-      }),
-    }
-  })
+const ContactForm = () => {
+  const contactFormPayload = useContactForm()
 
   const {
     callbacks: {
       setState,
       submitForm,
-      toogleRoom,
     },
     state: {
-      address,
-      company,
       email,
       error,
       firstName,
@@ -45,14 +27,9 @@ const QuoteForm = () => {
       lastName,
       loading,
       phone,
-      projectAddress,
-      projectType,
-      requirements,
-      rooms,
       success,
     },
-    uppy,
-  } = quoteFormPayload
+  } = contactFormPayload
 
   if (success) {
     return (
@@ -60,7 +37,7 @@ const QuoteForm = () => {
         <ContentWrapper>
           <div className="w-full">
             <HeadingTwo>
-              Thank you for your quote request!
+              Thank you for reaching out!
             </HeadingTwo>
 
             <p className="my-4">
@@ -73,14 +50,14 @@ const QuoteForm = () => {
   }
 
   return (
-    <section className="w-full p-8 lg:p-16" id="quoteRequest">
+    <section className="w-full p-8 lg:p-16" id="contactUs">
       <ContentWrapper className="flex-col">
         <HeadingTwo className="mt-0 mb-8">
-          Quote Request
+          Contact Us
         </HeadingTwo>
 
         <HeadingThree className="mt-0 mb-8">
-          Contact Details
+          Send Us a Message
         </HeadingThree>
 
         <form className="w-full" onSubmit={submitForm}>
@@ -145,23 +122,6 @@ const QuoteForm = () => {
           </FormRow>
 
           <FormRow>
-            <div className="w-full px-3">
-              <FieldLabel htmlFor="address">* Address</FieldLabel>
-              <AddressAutocomplete
-                id="address"
-                onChange={(value) => {
-                  setState({
-                    address: value,
-                    projectAddress: value,
-                  })
-                }}
-                required
-                value={address}
-              />
-            </div>
-          </FormRow>
-
-          <FormRow>
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <FieldLabel htmlFor="industry">* Industry</FieldLabel>
               <Select
@@ -182,106 +142,37 @@ const QuoteForm = () => {
                 <option value="Other">Other</option>
               </Select>
             </div>
-
-            {industry !== 'Homeowner' && (
-              <div className="w-full md:w-1/2 px-3">
-                <FieldLabel htmlFor="company">Company</FieldLabel>
-                <Input
-                  id="company"
-                  onChange={(e) => {
-                    setState({ company: e.target.value })
-                  }}
-                  required
-                  value={company}
-                />
-              </div>
-            )}
-          </FormRow>
-
-          <HeadingThree className="mt-0 mb-8">
-            Project Details
-          </HeadingThree>
-
-          <FormRow>
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <FieldLabel htmlFor="projectType">* Project Type</FieldLabel>
-              <Select
-                id="projectType"
-                onChange={(e) => {
-                  setState({ projectType: e.target.value })
-                }}
-                required
-                value={projectType}
-              >
-                <option value="">Please Select...</option>
-                <option value="NewProject">New Project</option>
-                <option value="Renovation">Renovation</option>
-              </Select>
-            </div>
-
-            <div className="w-full md:w-1/2 px-3">
-              <FieldLabel htmlFor="requirements">* Requirements</FieldLabel>
-              <Select
-                id="requirements"
-                onChange={(e) => {
-                  setState({ requirements: e.target.value })
-                }}
-                required
-                value={requirements}
-              >
-                <option value="">Please Select...</option>
-                <option value="Supply">Supply</option>
-                <option value="SupplyInstall">Supply & Install</option>
-              </Select>
-            </div>
           </FormRow>
 
           <FormRow>
             <div className="w-full px-3">
-              <FieldLabel htmlFor="projectAddress">* Project Address</FieldLabel>
-              <AddressAutocomplete
-                id="projectAddress"
-                onChange={(value) => {
-                  setState({ projectAddress: value })
+              <FieldLabel htmlFor="message">* Message</FieldLabel>
+              <textarea
+                className={`
+                  appearance-none
+                  block
+                  w-full
+                  bg-gray-50
+                  text-gray-700
+                  border
+                  border-gray-200
+                  rounded
+                  py-3
+                  px-4
+                  mb-3
+                  leading-tight
+                  focus:outline-none
+                focus:bg-white
+                `}
+                id="message"
+                onChange={(e) => {
+                  setState({ message: e.target.value })
                 }}
                 required
-                value={projectAddress}
+                rows={10}
               />
             </div>
           </FormRow>
-
-          {!!uppy && (
-            <FormRow>
-              <div className="w-full px-3">
-                <FieldLabel htmlFor="attachments">* Floor Plans</FieldLabel>
-                <FileUpload uppy={uppy} />
-              </div>
-            </FormRow>
-          )}
-
-          <HeadingThree className="mb-8">
-            Room Schedule
-          </HeadingThree>
-
-          <AddRoom
-            callbacks={{
-              addRoom: (room) => toogleRoom(room),
-            }}
-          />
-
-          {!!rooms.length && (
-            <div>
-              {rooms.map((room) => (
-                <Room
-                  callbacks={{
-                    removeRoom: (room) => toogleRoom(room),
-                  }}
-                  key={room.key}
-                  room={room}
-                />
-              ))}
-            </div>
-          )}
 
           <FormRow className="mt-8">
             <Button
@@ -290,7 +181,7 @@ const QuoteForm = () => {
               disabled={loading}
               type="submit"
             >
-              {loading ? 'Sending...' : 'Submit Quote Request'}
+              {loading ? 'Sending...' : 'Submit Message'}
             </Button>
           </FormRow>
         </form>
@@ -299,4 +190,4 @@ const QuoteForm = () => {
   )
 }
 
-export default QuoteForm
+export default ContactForm

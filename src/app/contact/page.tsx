@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import MainNavigation from "@/components/MainNavigation";
 
@@ -6,9 +7,7 @@ function ContactPage() {
     <main>
       <MainNavigation />
 
-      <div className="h-screen">
-        Contact Us
-      </div>
+      <ContactForm />
 
       <Footer />
     </main>

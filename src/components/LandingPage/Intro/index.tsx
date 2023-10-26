@@ -1,5 +1,3 @@
-import { scroller } from 'react-scroll'
-
 import { ImYoutube } from 'react-icons/im'
 
 import Button from '@/components/Button'
@@ -70,11 +68,7 @@ const Intro = (props: IntroProps) => {
 
             <div className="flex mt-6">
               <Button
-                onClick={() => scroller.scrollTo('quoteRequest', {
-                  duration: 800,
-                  delay: 0,
-                  smooth: 'easeInOutQuart'
-                })}
+                href="/pricing"
               >
                 Free Quote
               </Button>
