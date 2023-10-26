@@ -64,7 +64,6 @@ function LandingPage(props: LandingPageProps) {
   })
 
   const landingPageData = data?.landingPageCollection?.items?.[0]
-  console.log(landingPageData, props)
 
   return (
     <main>

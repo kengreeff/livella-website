@@ -10,8 +10,8 @@ import type { AddressOption } from '../components/Forms/AddressAutocomplete/inde
 
 type SetState = Dispatch<SetStateAction<DefaultState>>
 
-type Room = {
-  key: string,
+export type Room = {
+  key?: string,
   installType: string,
   floorCovering: string,
   title: string,
@@ -28,7 +28,7 @@ type DefaultState = {
   lastName: string,
   loading: boolean,
   phone: string,
-  projectAddress: string,
+  projectAddress: SingleValue<AddressOption> | null,
   projectType: string,
   requirements: string,
   rooms: Room[],
@@ -38,6 +38,7 @@ type DefaultState = {
 const submitForm = async (
   state: DefaultState,
   setState: SetState,
+  onSuccess: VoidFunction,
 ) => {
   const {
     address,
@@ -74,7 +75,7 @@ const submitForm = async (
       industry,
       lastName,
       phone,
-      projectAddress,
+      projectAddress: projectAddress?.label,
       projectType,
       requirements,
       rooms,
@@ -82,16 +83,18 @@ const submitForm = async (
   })
 
   const data = await response.json()
-  const { error, entry } = data
+  const { error, success } = data
 
   setState(prevState => {
     return {
       ...prevState,
       error: error || '',
       loading: false,
-      success: entry ? true : false,
+      success: success,
     }
   })
+
+  onSuccess()
 }
 
 const toggleRoom = (room: Room, state: DefaultState, setState: SetState) => {
@@ -135,7 +138,19 @@ const defaultState: DefaultState = {
   success: false,
 }
 
-function useQuoteForm() {
+type UseQuoteFormOptions = {
+  callbacks: {
+    onSuccess: VoidFunction,
+  }
+}
+
+function useQuoteForm(options: UseQuoteFormOptions) {
+  const {
+    callbacks: {
+      onSuccess,
+    },
+  } = options
+
   const [state, setState] = useState(defaultState)
 
   const uppy = useUppy({
@@ -170,7 +185,7 @@ function useQuoteForm() {
       },
       submitForm: (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        submitForm(state, setState)
+        submitForm(state, setState, onSuccess)
       },
       toogleRoom: (room: Room) => toggleRoom(room, state, setState),
     },

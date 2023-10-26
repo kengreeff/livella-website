@@ -1,3 +1,5 @@
+import { scroller } from 'react-scroll'
+
 import Button from '@/components/Button'
 import ContentWrapper from "@/components/ContentWrapper"
 import HeadingTag from "@/components/HeadingTag"
@@ -54,7 +56,13 @@ const BookFreeQuote = () => {
           </ul>
 
           <div className="flex mt-8">
-            <Button>
+            <Button
+              onClick={() => scroller.scrollTo('quoteRequest', {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+              })}
+            >
               Get a free quote or consultation now
             </Button>
           </div>

@@ -84,7 +84,6 @@ function InstallersPage() {
   const { data } = useSuspenseQuery(GET_CONTACTS_QUERY)
 
   const groupedContacts = groupContactsByTypeAndLocation(data?.contactCollection?.items || [])
-  console.log(groupedContacts)
 
   return (
     <main>

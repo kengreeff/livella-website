@@ -4,13 +4,18 @@ export async function POST(request: Request) {
   try {
     const jsonBody = await request.json()
     const {
-      attachmentIds = [],
       address,
+      attachmentIds = [],
+      company,
       email,
       firstName,
       industry,
       lastName,
       phone,
+      projectAddress,
+      projectType,
+      requirements,
+      rooms = [],
     } = jsonBody
 
     const space = await contentfulClient.getSpace(process.env.CONTENTFUL_SPACE_ID || '')
@@ -32,6 +37,9 @@ export async function POST(request: Request) {
             }
           }),
         },
+        company: {
+          "en-US": company,
+        },
         industry: {
           "en-US": industry,
         },
@@ -47,10 +55,22 @@ export async function POST(request: Request) {
         phone: {
           "en-US": phone,
         },
+        projectAddress: {
+          "en-US": projectAddress,
+        },
+        projectType: {
+          "en-US": projectType,
+        },
+        requirements: {
+          "en-US": requirements,
+        },
+        rooms: {
+          "en-US": rooms,
+        },
       }
     })
 
-    // Send Email to the Team
+    // // Send Email to the Team
     
 
     return Response.json({ success: true, entry  })

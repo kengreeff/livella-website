@@ -1,3 +1,5 @@
+import { scroller } from 'react-scroll'
+
 import { Nanum_Myeongjo } from 'next/font/google'
 import { FaCheck } from 'react-icons/fa'
 
@@ -38,7 +40,13 @@ const Hero = (props: HeroProps) => {
           </p>
 
           <div className="flex flex-col lg:flex-row mt-8 lg:mt-12">
-            <Button>
+            <Button
+              onClick={() => scroller.scrollTo('quoteRequest', {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+              })}
+            >
               Request Quote
             </Button>
 

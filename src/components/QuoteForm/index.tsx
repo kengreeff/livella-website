@@ -1,3 +1,5 @@
+import { scroller } from 'react-scroll'
+
 import useQuoteForm from "@/hooks/useQuoteForm"
 
 import AddressAutocomplete from "@/components/Forms/AddressAutocomplete"
@@ -12,6 +14,7 @@ import Input from "@/components/Forms/Input"
 import Select from "@/components/Forms/Select"
 
 import AddRoom from './AddRoom'
+import Room from './Room'
 
 type QuoteFormProps = {
   children: React.ReactNode,
@@ -20,11 +23,21 @@ type QuoteFormProps = {
 const QuoteForm = (props: QuoteFormProps) => {
   const { children } = props
 
-  const quoteFormPayload = useQuoteForm()
+  const quoteFormPayload = useQuoteForm({
+    callbacks: {
+      onSuccess: () => scroller.scrollTo('quoteRequest', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      }),
+    }
+  })
+
   const {
     callbacks: {
       setState,
       submitForm,
+      toogleRoom,
     },
     state: {
       address,
@@ -39,6 +52,7 @@ const QuoteForm = (props: QuoteFormProps) => {
       projectAddress,
       projectType,
       requirements,
+      rooms,
       success,
     },
     uppy,
@@ -63,7 +77,7 @@ const QuoteForm = (props: QuoteFormProps) => {
   }
 
   return (
-    <section className="w-full p-8 lg:p-16">
+    <section className="w-full p-8 lg:p-16" id="quoteRequest">
       <ContentWrapper className="flex-col">
         <HeadingTwo className="mt-0 mb-8">
           Quote Request
@@ -253,9 +267,27 @@ const QuoteForm = (props: QuoteFormProps) => {
             Room Schedule
           </HeadingThree>
 
-          <AddRoom />
+          <AddRoom
+            callbacks={{
+              addRoom: (room) => toogleRoom(room),
+            }}
+          />
 
-          <FormRow>
+          {!!rooms.length && (
+            <div>
+              {rooms.map((room) => (
+                <Room
+                  callbacks={{
+                    removeRoom: (room) => toogleRoom(room),
+                  }}
+                  key={room.key}
+                  room={room}
+                />
+              ))}
+            </div>
+          )}
+
+          <FormRow className="mt-8">
             <Button
               as="button"
               buttonStyle={loading ? 'secondaryBlack' : 'primary'}
