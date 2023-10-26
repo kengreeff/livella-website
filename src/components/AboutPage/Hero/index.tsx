@@ -1,5 +1,4 @@
 import { Nanum_Myeongjo } from 'next/font/google'
-import { FaCheck } from 'react-icons/fa'
 
 const nanumMyeongjo = Nanum_Myeongjo({ subsets: ['latin'], weight: '400' })
 
