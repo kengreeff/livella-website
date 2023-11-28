@@ -33,7 +33,7 @@ const Intro = () => {
             <HeadingTag colorScheme="black">Not just for cold winters</HeadingTag>
 
             <HeadingTwo className="mt-8">
-              Say Hello to<br />
+              Say hello to<br />
               complete home<br />
               comfort
             </HeadingTwo>
@@ -44,17 +44,15 @@ const Intro = () => {
             </p>
 
             <p className="mt-8 leading-normal text-lg">
-              <strong>Tired of icy cold floors sending shivers down your spine every winter?</strong> Sick of needing socks to run to the bathroom in the middle of the night? 
-              Annoyed at the costs of heating the home with air con or space heaters? 
-              Cold surfaces under-foot, in the bathrooms, kitchen, living spaces and even 
-              the stairs make it harder to enjoy the home you’re investing so much in.
+              <strong>Are you tired of dealing with cold spots in your home?</strong> Fed up with bulky radiators or heating units taking up valuable space in
+              your rooms? Frustrated that different rooms in your house have varying temperatures, making it challenging to achieve
+              consistent warmth throughout?
             </p>
 
             <p className="mt-8 leading-normal text-lg">
-              <strong>Provide comfort for you and your family and increase your properties value while decreasing heating costs year round.</strong> No more 
-              dreading those frosty mornings or struggling to keep your toes warm. 
-              Our underfloor heating solution lets you enjoy a luxurious and inviting 
-              atmosphere throughout your home, all year round.
+              <strong>Livella is dedicated to redefining comfort.</strong> We firmly believe that every space should have the luxurious experience of underfloor
+              heating. Our commitment is to provide you with the highest quality products and exceptional service to make this a reality. Our
+              underfloor heating solution lets you enjoy a luxurious and inviting atmosphere throughout your home, all year round.
             </p>
 
             <div className="flex mt-6">

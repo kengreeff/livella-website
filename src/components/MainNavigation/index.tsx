@@ -64,8 +64,8 @@ const MainNavigation = () => {
           </li>
 
           <li>
-            <a className="ml-6" href="/installers">
-              Installers
+            <a className="ml-6" href="/suppliers">
+              Suppliers
             </a>
           </li>
 

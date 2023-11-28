@@ -5,13 +5,14 @@ import HeadingThree from '@/components/HeadingThree'
 import HeadingFour from '@/components/HeadingFour'
 
 type FeaturedInstallProps = {
+  address: string,
   children: React.ReactNode,
   imageUrl: string,
   title: string,
 }
 
 const FeaturedInstall = (props: FeaturedInstallProps) => {
-  const { children, imageUrl, title } = props
+  const { address, children, imageUrl, title } = props
 
   return (
     <div className="flex flex-col">
@@ -37,7 +38,7 @@ const FeaturedInstall = (props: FeaturedInstallProps) => {
       </div>
 
       <HeadingFour>
-        Mona Vale, NSW
+        {address || 'TBC'}
       </HeadingFour>
 
       <p className="mt-4">

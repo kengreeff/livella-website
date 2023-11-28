@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import ContactGroup from "@/components/ContactGroup"
 import ContentWrapper from "@/components/ContentWrapper"
 import HeadingTwo from "@/components/HeadingTwo"
@@ -34,7 +36,7 @@ const Suppliers = (props: SuppliersProps) => {
 
           {Object.values(supplier?.countries).map((country) => {
             return (
-              <>
+              <Fragment key={country.key}>
                 <HeadingThree key={country.countryCode} className="mt-12">
                   {country.title}
                 </HeadingThree>
@@ -57,7 +59,7 @@ const Suppliers = (props: SuppliersProps) => {
                     </ContactGroup>
                   )
                 })}
-              </>
+              </Fragment>
             )
           })}
 

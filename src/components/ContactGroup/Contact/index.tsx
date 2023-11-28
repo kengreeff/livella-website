@@ -1,4 +1,4 @@
-import type { Contact } from "@/app/installers/page"
+import type { Contact } from "@/app/suppliers/page"
 
 const buildAddress = (contact: Contact) => {
   const { addressStreet, addressSuburb, addressPostcode } = contact

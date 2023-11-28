@@ -13,28 +13,32 @@ const CompetitorPricing = () => {
         <div className="flex flex-col lg:flex-row w-full">
           <div className="flex flex-col text-gray-100">
             <HeadingTag>
-              How Expensive is Underfloor Heating?
+              Competitor Pricing Comparison
             </HeadingTag>
 
             <HeadingTwo className="mt-8">
-              Competitor Pricing<br />
-              Comparison
+              How Expensive is<br />
+              Underfloor Heating?
             </HeadingTwo>
 
             <div className="flex w-full flex-col lg:flex-row">
               <div className="flex flex-col lg:w-1/2">
                 <p className="mt-8">
-                  How expensive is underfloor heating? You&apos;d be surprised to find that heating your entire home is much 
-                  more affordable in long term costs and the initial install than you might feel. Livella produces a 
-                  premium product and service that costs more on average than the cheapest competitors but less than the 
-                  brands that overcharge for their product and service.
+                  Although underfloor heating is often seen as an initially expensive investment, its long-term benefits far outweigh the upfront
+                  costs. Contrary to common perceptions, using our system to heat your home can be remarkably cost-effective due to the
+                  efficiency and minimized energy consumption.
+                </p>
+                
+                <p className="mt-8">
+                  Livella's dedication to engaging top-tier local installers guarantees a seamless blend of quality and efficiency, ultimately
+                  elevating the overall customer journey. Our innovative product design streamlines installation, cutting down on the time
+                  tradespeople spend on-site.
                 </p>
 
                 <ul className="mt-8 list-disc ml-4">
-                  <li>Livella&apos;s after sales service and support is unmatched in the industry.</li>
-                  <li>Our unique product reduces install complexity and the time trades need to be on-site.</li>
-                  <li>Easiest to use thermostat controller.</li>
-                  <li>Using the best local installers.</li>
+                  <li>Livella stands out in the industry with unparalleled customer service and support.</li>
+                  <li>Our distinctive product minimizes installation complexity, reducing the time tradespeople spend on-site.</li>
+                  <li>Livella's dedication to engaging top-tier local installers guarantees a seamless blend of quality and efficiency.</li>
                 </ul>
               </div>
 

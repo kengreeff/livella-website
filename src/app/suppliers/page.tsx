@@ -9,10 +9,10 @@ import groupContactsByTypeAndLocation from "@/utils/groupContactsByTypeAndLocati
 
 import BookFreeQuote from "@/components/BookFreeQuote";
 import Footer from "@/components/Footer"
-import Hero from "@/components/InstallersPage/Hero";
-import Installers from "@/components/InstallersPage/Installers";
+import Hero from "@/components/SuppliersPage/Hero";
+import Installers from "@/components/SuppliersPage/Installers";
 import MainNavigation from "@/components/MainNavigation"
-import Suppliers from "@/components/InstallersPage/Suppliers";
+import Suppliers from "@/components/SuppliersPage/Suppliers";
 
 export type ContactType = {
   shortcode: string,
@@ -50,7 +50,7 @@ type ContactsData = {
 
 const GET_CONTACTS_QUERY: TypedDocumentNode<ContactsData> = gql`
   query GetContacts {
-    contactCollection {
+    contactCollection(limit: 100) {
       items {
         addressPostcode
         addressStreet
@@ -82,7 +82,7 @@ const GET_CONTACTS_QUERY: TypedDocumentNode<ContactsData> = gql`
 
 function InstallersPage() {
   const { data } = useSuspenseQuery(GET_CONTACTS_QUERY)
-
+  
   const groupedContacts = groupContactsByTypeAndLocation(data?.contactCollection?.items || [])
 
   return (

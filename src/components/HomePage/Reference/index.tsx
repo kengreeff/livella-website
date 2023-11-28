@@ -49,7 +49,7 @@ const Reference = () => {
             }}
           >
             <HeadingTwo className="mt-0">
-              “The top tagline pulled out of the main quote”
+              “Where Exceptional Warmth Meets Seamless Professionalism”
             </HeadingTwo>
 
             <div className="flex mt-4">
@@ -61,14 +61,14 @@ const Reference = () => {
             </div>
 
             <HeadingThree>
-              Mona Vale, NSW
+              Nathan, Manly NSW
             </HeadingThree>
 
             <p className="mt-8">
-              “We’re not happy until you are. And we’re available via phone an email, 
-              whether you’re having a problem with the unit or simply forgot how 
-              to program the thermostat. Livella prides itself on the excellent 
-              reputation build from 30 years in the industry helping our trades and customers.”
+              “I had an exceptional experience with Livella's underfloor heating supply and installation service. The system's performance
+              has truly impressed, delivering consistent warmth across the floors. The team's professionalism was remarkable, seamlessly
+              integrating the system into my home without causing any disruption. Their commitment to ensuring my confidence and keeping
+              me well-informed throughout the entire experience was highly appreciated”
             </p>
           </div>
         </div>

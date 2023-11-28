@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 import ContactGroup from "@/components/ContactGroup"
 import ContentWrapper from "@/components/ContentWrapper"
 import HeadingThree from "@/components/HeadingThree"
@@ -26,7 +28,7 @@ const Installers = (props: InstallersProps) => {
 
           {Object.values(installer?.countries).map((country) => {
             return (
-              <>
+              <Fragment key={country.key}>
                 <HeadingThree key={country.countryCode} className="mt-12">
                   {country.title}
                 </HeadingThree>
@@ -49,7 +51,7 @@ const Installers = (props: InstallersProps) => {
                     </ContactGroup>
                   )
                 })}
-              </>
+              </Fragment>
             )
           })}
 

@@ -14,22 +14,24 @@ const Hero = () => {
       <ContentWrapper>
         <div className="relative z-10 p-8">
           <h1
-            className={`max-w-4xl text-4xl lg:text-6xl leading-tight tracking-wide mt-8 lg:mt-20`}
+            className={`max-w-2xl text-4xl lg:text-6xl leading-tight tracking-wide mt-8 lg:mt-20`}
             style={{ ...nanumMyeongjo.style }}
           >
-            Crafting sustainable<br />
-            heating solutions<br />
-            for Australian<br />
-            Families.
+            Experience Unmatched
+            Comfort and Efficiency
+            with Livella Underfloor
+            Heating.
           </h1>
 
           <p
-            className="mt-8 lg:mt-12 lg:text-xl leading-relaxed max-w-2xl"
+            className="mt-8 lg:mt-12 lg:text-xl leading-relaxed max-w-lg"
           >
-            For over 30 years Livella has created warm,<br />
-            inviting spaces for Australian renovations<br />
-            and builds using the best technology<br />
-            and installers.
+            For over 30 years, Livella has been creating comfort
+            in both new builds and renovations across Australia
+            and New Zealand. We use cutting-edge technology
+            and skilled installers to ensure the finest quality
+            in every space.<br /><br />
+            Contact us today to start your journey to a warmer, cosier, and more energy-efficient environment.
           </p>
 
           <div className="flex flex-col lg:flex-row mt-8 lg:mt-12">
@@ -55,7 +57,12 @@ const Hero = () => {
 
             <li className="flex items-center mt-2">
               <FaCheck />
-              <span className="ml-4">Family and Allergy Friendly</span>
+              <span className="ml-4">Custom designs for every room</span>
+            </li>
+
+            <li className="flex items-center mt-2">
+              <FaCheck />
+              <span className="ml-4">Space-Saving & Aesthetic Appeal</span>
             </li>
           </ul>
         </div>

@@ -34,19 +34,17 @@ const SavingEnergy = () => {
               </HeadingTwo>
 
               <p className="mt-8">
-                Livella underfloor heating creates a closed loop of sustainable low energy heating.
+                Livella's underfloor heating establishes a sustainable, low-energy heating cycle. With intelligent controls and optimized usage, it
+                preserves energy while ensuring consistent temperatures throughout your entire home.
               </p>
 
               <p className="mt-8">
-                <strong>Smart controls and efficient usage conserves energy and keeps your entire home temperate. </strong>
-                Underfloor heating means walking barefoot through the house in the middle of the night and 
-                playing with your kids on the floor no matter what season.
-                Welcoming spaces designed and installed by Livella’s licensed technicians 
-                offering professionally installed service.
+                <strong>Experience the luxury of walking barefoot in your house at any time</strong>, engaging with your kids on the floor, regardless of the
+                season. Livella's licensed technicians craft inviting spaces, providing expert installation services.
               </p>
 
               <p className="mt-8">
-                24/7 troubleshooting and support backed by our 5 year product guarantee.
+                24/7 troubleshooting and support backed by our 10 year product guarantee.
               </p>
             </div>
           </div>
@@ -54,12 +52,10 @@ const SavingEnergy = () => {
           <div className="flex flex-col lg:flex-row mt-8 w-full">
             <ul className="w-full lg:w-1/2">
               <ListItem>Thinnest most workable product on the market.</ListItem>
-              <ListItem>Can be installed in tile glue after sub-floor.</ListItem>
               <ListItem>Radiant Heat warms the surfaces evenly.</ListItem>
-              <ListItem>Fastest Install to speed up builds and renovations.</ListItem>
+              <ListItem>Fast Install to speed up builds and renovations.</ListItem>
               <ListItem>Smart Thermostat automates floor heating.</ListItem>
               <ListItem>Maintenance Free Solution to heating the home.</ListItem>
-              <ListItem>Built in circuit fault interruptor.</ListItem>
               <ListItem>Consistent comfortable warmth year round.</ListItem>
               <ListItem>Increased property value if selling or renting.</ListItem>
             </ul>
@@ -67,10 +63,8 @@ const SavingEnergy = () => {
             <ul className="w-full lg:w-1/2">
               <ListItem>Zoned heating reduces wasted energy.</ListItem>
               <ListItem>Suitable for many flooring types and choices.</ListItem>
-              <ListItem>Quick Heat Up Times (Minutes not hours).</ListItem>
               <ListItem>Completely silent operation.</ListItem>
               <ListItem>Invisible solution (no visible equipment).</ListItem>
-              <ListItem>Damage alarms to protect your family.</ListItem>
               <ListItem>Compatible with solar power systems.</ListItem>
               <ListItem>Lower energy usage than most other solutions.</ListItem>
               <ListItem>Can be used on stairs and in wet areas.</ListItem>

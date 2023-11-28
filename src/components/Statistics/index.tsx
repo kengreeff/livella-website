@@ -20,7 +20,7 @@ const Statistics = () => {
           </Statistic>
 
           <Statistic title="Installers">
-            14
+            30+
           </Statistic>
         </div>
       </ContentWrapper>

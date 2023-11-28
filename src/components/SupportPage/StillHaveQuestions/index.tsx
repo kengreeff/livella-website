@@ -18,14 +18,14 @@ const StillHaveQuestions = () => {
           </p>
 
           <p className="mt-4">
-            You can call us any time on 1300 350 607 (AU) or 0800 432 892 (NZ) or if you prefer, email us below.
+            You can call us any time on 1800 833 933 (AU) or 0800 432 892 (NZ) or if you prefer, email us below.
           </p>
 
           <div className="flex flex-col lg:flex-row justify-start mt-8">
             <Button href="/contact" target="_self">Email Us</Button>
 
             <Button buttonStyle="secondaryBlack" className="mt-2 lg:mt-0 lg:ml-2">
-              1300 350 607
+              1800 833 933
             </Button>
           </div>
         </div>

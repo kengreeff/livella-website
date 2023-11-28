@@ -1,3 +1,10 @@
+"use client";
+
+export const dynamic = "force-dynamic";
+
+import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { gql, TypedDocumentNode } from "@apollo/client";
+
 import ContentWrapper from "@/components/ContentWrapper"
 import HeadingTag from "@/components/HeadingTag"
 
@@ -7,7 +14,50 @@ import ReviewThreeImage from './assets/review_three.jpeg'
 
 import FeaturedInstall from "./FeaturedInstall"
 
+export type Review = {
+  address: string,
+  body: string,
+  mainImage: {
+    url: string,
+  },
+  sys: {
+    id: string,
+  },
+  title: string,
+}
+
+type ReviewsData = {
+  reviewCollection: {
+    items: Review[],
+  }
+}
+
+const GET_REVIEWS_QUERY: TypedDocumentNode<ReviewsData> = gql`
+  query GetReviews {
+    reviewCollection(limit: 3) {
+      items {
+        address
+        body
+        mainImage {
+          url
+        }
+        sys {
+          id
+        }
+        title
+      }
+    }
+  }
+`
+
 const FeaturedInstallations = () => {
+  const { data } = useSuspenseQuery(GET_REVIEWS_QUERY)
+  
+  const reviews = data?.reviewCollection?.items || []
+  if (!reviews.length) {
+    return null
+  }
+
   return (
     <section className="w-full p-8 lg:p-16">
       <ContentWrapper>
@@ -17,26 +67,16 @@ const FeaturedInstallations = () => {
           </HeadingTag>
 
           <div className="grid lg:grid-cols-3 gap-16 w-full mt-8">
-            <FeaturedInstall imageUrl={ReviewOneImage.src} title="3 Bedroom Renovation">
-              &quot;We&apos;re not happy until you are. And we&apos;re available via phone an email, whether 
-              you&apos;re having a problem with the unit or simply forgot how to program the 
-              thermostat. Livella prides itself on the excellent reputation build from 
-              30 years in the industry helping our trades and customers.&quot;
-            </FeaturedInstall>
-
-            <FeaturedInstall imageUrl={ReviewTwoImage.src} title="3 Bedroom Renovation">
-              &quot;We&apos;re not happy until you are. And we&apos;re available via phone an email, whether 
-              you&apos;re having a problem with the unit or simply forgot how to program the 
-              thermostat. Livella prides itself on the excellent reputation build from 
-              30 years in the industry helping our trades and customers.&quot;
-            </FeaturedInstall>
-
-            <FeaturedInstall imageUrl={ReviewThreeImage.src} title="3 Bedroom Renovation">
-              &quot;We&apos;re not happy until you are. And we&apos;re available via phone an email, whether 
-              you&apos;re having a problem with the unit or simply forgot how to program the 
-              thermostat. Livella prides itself on the excellent reputation build from 
-              30 years in the industry helping our trades and customers.&quot;
-            </FeaturedInstall>
+            {reviews.map((review) => (
+              <FeaturedInstall
+                address={review.address}
+                key={review.sys?.id}
+                imageUrl={review.mainImage?.url || ReviewTwoImage.src}
+                title={review.title}
+              >
+                &quot;{review.body}&quot;
+              </FeaturedInstall>
+            ))}
           </div>
         </div>
       </ContentWrapper>

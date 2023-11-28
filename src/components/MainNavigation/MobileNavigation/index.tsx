@@ -45,8 +45,8 @@ const MobileNavigation = (props: MobileNavigationProps) => {
             Products
           </Link>
 
-          <Link href="/installers">
-            Installers
+          <Link href="/suppliers">
+            Suppliers
           </Link>
 
           <Link href="/support">

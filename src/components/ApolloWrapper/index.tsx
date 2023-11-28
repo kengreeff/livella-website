@@ -22,6 +22,7 @@ function makeClient() {
 
   return new NextSSRApolloClient({
     cache: new NextSSRInMemoryCache(),
+    connectToDevTools: true,
     link:
       typeof window === "undefined"
         ? ApolloLink.from([

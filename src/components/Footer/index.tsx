@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="flex flex-col text-sm text-gray-600 lg:ml-16">
               <HeadingFour>Important Resources</HeadingFour>
 
-              <a className="mt-4" href="/installers">Our Installers</a>
+              <a className="mt-4" href="/suppliers">Suppliers & Installers</a>
               <p className="mt-2">Australian Owned and Installed</p>
               <p className="mt-2">Documentation</p>
               <p className="mt-2">How to Use the Thermostat</p>
@@ -92,11 +92,11 @@ const Footer = () => {
 
           <div className="flex flex-col lg:flex-row lg:mx-auto my-4 lg:my-0">
             <span className="flex lg:items-center">
-              <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (AU)
+              <HiPhone style={{ marginRight: 8 }} /> 1800 833 933 (AU)
             </span>
             
             <span className="flex lg:items-center lg:mx-8">
-              <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (NZ)
+              <HiPhone style={{ marginRight: 8 }} /> 1800 833 933 (NZ)
             </span>
 
             <span className="flex lg:items-center">

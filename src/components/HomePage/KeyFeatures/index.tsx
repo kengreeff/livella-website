@@ -15,8 +15,11 @@ const KeyFeatures = () => {
             icon={<PiggyBankIcon height={60} width={60} />}
             title="Efficient & Affordable"
           >
-            Enjoy smart-programmed energy efficient heating to save you money on your bills.
-            While increasing the potential value of your home.
+            Livella systems are highly efficient, keeping
+            heat longer and using less energy than
+            traditional heating methods, which means
+            lower utility bills and more cost-effective
+            heating solution over time.
           </KeyFeature>
 
           <KeyFeature
@@ -24,16 +27,21 @@ const KeyFeatures = () => {
             icon={<PetsIcon height={60} width={60} />}
             title="Safe & Comfortable"
           >
-            Enjoy smart-programmed energy efficient heating to save you money on your bills.
-            While increasing the potential value of your home.
+            Underfloor heating reduces airborne particles
+            compared to traditional systems by not using
+            forced air that spreads dust, pet dander, and
+            allergens in the space.
           </KeyFeature>
 
           <KeyFeature
             icon={<HeatIcon height={60} width={60} />}
             title="Year Round Comfort"
           >
-            Enjoy smart-programmed energy efficient heating to save you money on your bills.
-            While increasing the potential value of your home.
+            Our automated systems allow you to personalize
+            multiple temperature settings daily, matching your
+            routines effortlessly. This adaptability ensures no
+            energy is wasted, perfectly aligning with your
+            schedules throughout the year.
           </KeyFeature>
         </div>
       </ContentWrapper>

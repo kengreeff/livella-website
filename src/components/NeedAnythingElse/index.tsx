@@ -15,11 +15,11 @@ const NeedAnythingElse = (props: NeedAnythingElseProps) => {
 
       <div className="flex flex-col lg:flex-row justify-center border mt-4 p-8">
         <span className="flex items-center">
-          <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (AU)
+          <HiPhone style={{ marginRight: 8 }} /> 1800 833 933 (AU)
         </span>
         
         <span className="flex items-center lg:mx-8">
-          <HiPhone style={{ marginRight: 8 }} /> 1300 350 607 (NZ)
+          <HiPhone style={{ marginRight: 8 }} /> 1800 833 933 (NZ)
         </span>
 
         <a className="flex items-center" href="/contact">

@@ -39,7 +39,7 @@ const Intro = (props: IntroProps) => {
             <HeadingTag colorScheme="black">Not just for cold winters</HeadingTag>
 
             <HeadingTwo className="mt-8">
-              Say Hello to<br />
+              Say hello to<br />
               complete home<br />
               comfort
             </HeadingTwo>

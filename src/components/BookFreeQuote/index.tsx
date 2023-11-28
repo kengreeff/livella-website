@@ -41,7 +41,7 @@ const BookFreeQuote = () => {
             </li>
 
             <li className="text-white">
-            We have a huge number of professional installers all across Australia available to complete the job as soon as you’re ready to get started.
+              We have a huge number of professional installers all across Australia & New Zealand available to complete the job as soon as you’re ready to get started.
             </li>
 
             <li className="text-white">
