@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import FrequentlyAskedQuestions from "@/components/SupportPage/FrequentlyAskedQuestions";
 import Hero from "@/components/SupportPage/Hero";
 import MainNavigation from "@/components/MainNavigation";
+import RecentReviews from "@/components/SupportPage/RecentReviews";
 import StillHaveQuestions from "@/components/SupportPage/StillHaveQuestions";
 
 import type { FAQ } from "@/components/Question";
@@ -70,6 +71,7 @@ const SupportPage = () => {
       <Hero />
       <FrequentlyAskedQuestions faqs={faqData?.faqCollection?.items} />
       <FeaturedInstallations />
+      <RecentReviews />
       <DownloadableResources
         downloadableResources={downloadableResourceData?.downloadableResourceCollection?.items}
       />

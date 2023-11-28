@@ -8,15 +8,13 @@ import { gql, TypedDocumentNode } from "@apollo/client";
 import ContentWrapper from "@/components/ContentWrapper"
 import HeadingTag from "@/components/HeadingTag"
 
-import ReviewOneImage from './assets/review_one.jpeg'
 import ReviewTwoImage from './assets/review_two.jpeg'
-import ReviewThreeImage from './assets/review_three.jpeg'
 
 import FeaturedInstall from "./FeaturedInstall"
 
-export type Review = {
+export type CaseStudy = {
   address: string,
-  body: string,
+  review: string,
   mainImage: {
     url: string,
   },
@@ -26,21 +24,21 @@ export type Review = {
   title: string,
 }
 
-type ReviewsData = {
-  reviewCollection: {
-    items: Review[],
+type CaseStudiesData = {
+  caseStudyCollection: {
+    items: CaseStudy[],
   }
 }
 
-const GET_REVIEWS_QUERY: TypedDocumentNode<ReviewsData> = gql`
-  query GetReviews {
-    reviewCollection(limit: 3) {
+const GET_REVIEWS_QUERY: TypedDocumentNode<CaseStudiesData> = gql`
+  query GetCaseStudies {
+    caseStudyCollection(limit: 3) {
       items {
         address
-        body
         mainImage {
           url
         }
+        review
         sys {
           id
         }
@@ -53,8 +51,8 @@ const GET_REVIEWS_QUERY: TypedDocumentNode<ReviewsData> = gql`
 const FeaturedInstallations = () => {
   const { data } = useSuspenseQuery(GET_REVIEWS_QUERY)
   
-  const reviews = data?.reviewCollection?.items || []
-  if (!reviews.length) {
+  const caseStudies = data?.caseStudyCollection?.items || []
+  if (!caseStudies.length) {
     return null
   }
 
@@ -67,14 +65,14 @@ const FeaturedInstallations = () => {
           </HeadingTag>
 
           <div className="grid lg:grid-cols-3 gap-16 w-full mt-8">
-            {reviews.map((review) => (
+            {caseStudies.map((caseStudy) => (
               <FeaturedInstall
-                address={review.address}
-                key={review.sys?.id}
-                imageUrl={review.mainImage?.url || ReviewTwoImage.src}
-                title={review.title}
+                address={caseStudy.address}
+                key={caseStudy.sys?.id}
+                imageUrl={caseStudy.mainImage?.url || ReviewTwoImage.src}
+                title={caseStudy.title}
               >
-                &quot;{review.body}&quot;
+                &quot;{caseStudy.review}&quot;
               </FeaturedInstall>
             ))}
           </div>
